@@ -23,7 +23,12 @@ document.addEventListener("DOMContentLoaded", function(){
     let textBox = document.createElement('input');
     textBox.setAttribute("type", "text");
     let li2 = document.createElement('li');
-    li2.appendChild(button2);
     li2.appendChild(textBox);
+    li2.appendChild(button2);
     list.appendChild(li2);
+
+    //when button2 is clicked an alert is displayed with the text that is typed in the text box
+    button2.addEventListener("click", function(){
+        alert(textBox.value);
+    })
 })
