@@ -31,4 +31,16 @@ document.addEventListener("DOMContentLoaded", function(){
     button2.addEventListener("click", function(){
         alert(textBox.value);
     })
+
+    //Create a div element in HTML
+    let div1 = document.createElement('div');
+    div1.style.backgroundColor = "green";
+    div1.style.padding = "50px";
+    let li3 = document.createElement('li');
+    li3.appendChild(div1);
+    list.appendChild(li3);
+    //When mouse hovers over the div the background color changes. Div returns to normal when the mouse leaves the div 
+    div1.addEventListener("mouseover", function(){
+        
+    })
 })
