@@ -47,4 +47,19 @@ document.addEventListener("DOMContentLoaded", function(){
     div1.addEventListener("mouseleave", function(){
         div1.style.backgroundColor = "green";
     })
+
+    //create a paragraph with text 
+    let para1 = document.createElement('p');
+    let para1Text = document.createTextNode("What is a sentance? You just said it.");
+    para1.appendChild(para1Text);
+    let li4 = document.createElement('li');
+    li4.appendChild(para1);
+    list.appendChild(li4);
+
+    //When you click the paragraph the color of the text switches to a random color 
+    let colors = ["blue", "green", "red", "pink", "purple", "black", "orange", "yellow", "brown", "teal", "gray"];
+    let randNum = Math.floor(Math.random() * colors.length);
+    para1.addEventListener("click", function(){
+        para1.style.color = colors[randNum];
+    });
 })
