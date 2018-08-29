@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //Create a div element in HTML
     let div1 = document.createElement('div');
     div1.style.backgroundColor = "green";
-    div1.style.padding = "50px";
+    div1.style.padding = "5em";
     let li3 = document.createElement('li');
     li3.appendChild(div1);
     list.appendChild(li3);
@@ -62,4 +62,24 @@ document.addEventListener("DOMContentLoaded", function(){
     para1.addEventListener("click", function(){
         para1.style.color = colors[randNum];
     });
+
+    //Add a button and an empty div 
+    let button3 = document.createElement("button");
+    let btn3Txt = document.createTextNode("Add my name to div");
+    button3.appendChild(btn3Txt);
+    let div2 = document.createElement("div");
+    div2.style.padding = "5em"
+    div2.style.backgroundColor = "aliceblue"
+    let li5 = document.createElement("li");
+    li5.appendChild(button3);
+    li5.appendChild(div2);
+    list.appendChild(li5);
+
+    //When button is clicked add a span with my name to the div
+    button3.addEventListener("click", function(){
+        let span1 = document.createElement("span");
+        let span1Txt = document.createTextNode("Jessica");
+        span1.appendChild(span1Txt);
+        div2.appendChild(span1);
+    })
 })
