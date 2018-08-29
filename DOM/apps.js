@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function(){
     list.appendChild(li3);
     //When mouse hovers over the div the background color changes. Div returns to normal when the mouse leaves the div 
     div1.addEventListener("mouseover", function(){
-        
+        div1.style.backgroundColor = "blue";
+    });
+
+    div1.addEventListener("mouseleave", function(){
+        div1.style.backgroundColor = "green";
     })
 })
