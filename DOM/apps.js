@@ -82,4 +82,26 @@ document.addEventListener("DOMContentLoaded", function(){
         span1.appendChild(span1Txt);
         div2.appendChild(span1);
     })
+
+    //An array of friends 
+    let friendsList = ["Jeremy", "Wolf", "Alex", "Penguin", "Sam", "Sarah", "Ted", "Amy", "Janet", "Elle"];
+
+    //When friendBtn is clicked each friend is added as an li to the ul 
+    let friends = document.getElementById("friends");
+    let count = 0;
+
+    document.getElementById("friendBtn").addEventListener("click", function(){
+        if (friendsList[count] == undefined){
+            alert("No more friends");
+        } else {
+            let liFriend = document.createElement('li');
+            let liFriendTxt = document.createTextNode(friendsList[count]);
+            liFriend.appendChild(liFriendTxt);
+            friends.appendChild(liFriend);
+            count++;
+        }
+       
+    })
+    
+
 })
