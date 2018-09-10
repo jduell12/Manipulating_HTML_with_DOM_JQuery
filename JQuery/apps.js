@@ -53,4 +53,17 @@ $(document).ready(function(){
         $(div2).css("background-color", "blue");
     });
 
+    //Creating fourth list item
+    let li4 = document.createElement("li");
+    $(ol).append(li4);
+    //Create a paragraph with text. 
+    let p = document.createElement("p");
+    let pTxt = document.createTextNode("Learning how to use Jquery to mainpulate an HTML page is very interesting. It's quite fascinating how you can manipulate the DOM with JavaScript or Jquery and get the same result. Just goes to show how flexible coding is and that there is no one right solution to a problem.");
+    $(p).append(pTxt);
+    $(li4).append(p);
+    //When the user clicks on the paragraph it turns a random color
+    $(p).click(function(){
+        let randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        $(p).css("color", randomColor);
+    });
 });
