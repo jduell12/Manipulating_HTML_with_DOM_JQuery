@@ -66,4 +66,24 @@ $(document).ready(function(){
         let randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
         $(p).css("color", randomColor);
     });
+
+    //Creating fifth list item
+    let li5 = document.createElement("li");
+    $(ol).append(li5);
+    //Create a button 
+    let btn3 = document.createElement("button");
+    let btn3Txt = document.createTextNode("Click to see my name");
+    $(btn3).append(btn3Txt);
+    $(li5).append(btn3);
+    //Create an empty div
+    let div3 = document.createElement("div");
+    $(div3).css({"background-color": "aliceblue", "height": "5em"})
+    $(li5).append(div3);
+    //When button is clicked a span that contains my name will be added to the div
+    $(btn3).click(function(){
+        let span = document.createElement("span");
+        let spanTxt = document.createTextNode("Jessica");
+        $(span).append(spanTxt);
+        $(div3).append(span);
+    });
 });
