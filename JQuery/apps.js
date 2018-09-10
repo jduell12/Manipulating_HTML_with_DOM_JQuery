@@ -38,4 +38,19 @@ $(document).ready(function(){
         alert($(txtBox).val());
     });
 
+    //Creating third list item
+    let li3 = document.createElement("li");
+    $(ol).append(li3);
+    //Create a div
+    let div2 = document.createElement("div");
+    $(li3).append(div2);
+    $(div2).css({"background-color": "blue", "height": "5em"});
+    //When mouse hovers over div the background color changes 
+    $(div2).mouseover(function(){
+        $(div2).css("background-color", "green");
+    });
+    $(div2).mouseleave(function(){
+        $(div2).css("background-color", "blue");
+    });
+
 });
