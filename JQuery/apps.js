@@ -86,4 +86,22 @@ $(document).ready(function(){
         $(span).append(spanTxt);
         $(div3).append(span);
     });
+
+    //Create an array of friends 
+    let friendsList = ["Jeremy", "Wolf", "Alex", "Penguin", "Sam", "Tina", "Ted", "Amy", "Janet", "Elle"];
+    //When button is clicked a friend is added to the HTML as a list item (list = ul)
+    let count = 0;
+    let friends = $(".list");
+    $(".friend").click(function(){
+        if (friendsList[count] == undefined){
+            alert("No more friends");
+        } else {
+            let liFriend = document.createElement("li");
+            let liTxt = document.createTextNode(friendsList[count]);
+            $(liFriend).append(liTxt)
+            $(friends).append(liFriend);
+            count++;
+        }
+    
+    });
 });
