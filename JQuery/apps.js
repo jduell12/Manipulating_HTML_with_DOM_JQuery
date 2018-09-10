@@ -22,4 +22,20 @@ $(document).ready(function(){
         alert("Have a good day!");
     });
 
+    //Creating second list item
+    let li2 = document.createElement("li");
+    $(ol).append(li2);
+    //Create a button and text box
+    let btn2 = document.createElement("button");
+    let btn2Txt = document.createTextNode("Click Here");
+    $(btn2).append(btn2Txt);
+    let txtBox = document.createElement("input");
+    txtBox.setAttribute("type", "text");
+    $(li2).append(txtBox);
+    $(li2).append(btn2);
+    //When second button is clicked an alert with the message typed in the text box will appear
+    $(btn2).click(function(){
+        alert($(txtBox).val());
+    });
+
 });
